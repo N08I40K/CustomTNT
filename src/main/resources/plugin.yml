@@ -1,6 +1,6 @@
 name: CustomTNT
 main: ru.n08i40k.customtnt.CustomTNTPlugin
-version: 1.0
+version: '${version}'
 author: N08I40K
 api-version: 1.16
 depend:

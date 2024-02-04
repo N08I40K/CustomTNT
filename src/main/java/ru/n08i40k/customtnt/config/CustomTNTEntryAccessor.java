@@ -87,7 +87,10 @@ public class CustomTNTEntryAccessor {
         reload(false);
     }
 
-    private static void reload(boolean isPre) {
+    public static void reload(boolean isPre) {
+        if (CustomTNTPlugin.getInstance().getNPlugin() == null)
+            return;
+
         if (isPre)
             CustomTNTEntryAccessor.unloadAll();
         else

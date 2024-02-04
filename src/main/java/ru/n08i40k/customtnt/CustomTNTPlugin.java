@@ -3,6 +3,7 @@ package ru.n08i40k.customtnt;
 import com.google.common.base.Preconditions;
 import lombok.Getter;
 import meteordevelopment.orbit.IEventBus;
+import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.plugin.java.JavaPlugin;
 import ru.n08i40k.customtnt.commands.MainCommand;
@@ -44,8 +45,6 @@ public final class CustomTNTPlugin extends JavaPlugin {
 
         bus.subscribe(CustomTNTEntryAccessor.class);
         bus.subscribe(ReplaceBlocksEntryAccessor.class);
-
-        nPlugin = NPluginApi.getInstance().getNPluginManager().registerNPlugin(this);
     }
 
     @Override
@@ -79,6 +78,20 @@ public final class CustomTNTPlugin extends JavaPlugin {
         commands.add(new MainCommand());
 
         getServer().getCommandMap().registerAll(PLUGIN_NAME_LOWER, commands);
+
+        nPlugin = NPluginApi.getInstance().getNPluginManager().registerNPlugin(
+                this,
+                this.getName(),
+                Locale.getInstance().get("npapi.view-name").getSingle().get(),
+                Material.TNT);
+
+        CustomTNTEntryAccessor.reload(false);
+    }
+
+    @Override
+    public void onDisable() {
+        if (nPlugin != null)
+            NPluginApi.getInstance().getNPluginManager().unregisterNPlugin(nPlugin);
     }
 
     public MainConfig getMainConfigData() {
