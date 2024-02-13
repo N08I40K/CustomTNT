@@ -25,7 +25,7 @@ repositories {
         name = "jitpack"
         url = "https://jitpack.io/"
     }
-    maven { // orbit
+    maven {
         name = "meteor-maven"
         url = "https://maven.meteordev.org/releases"
     }
