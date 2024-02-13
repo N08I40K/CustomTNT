@@ -12,8 +12,8 @@ import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import ru.n08i40k.customtnt.config.CustomTNTEntryAccessor;
 import ru.n08i40k.customtnt.utils.PluginUse;
-import ru.n08i40k.npluginapi.block.NBlock;
-import ru.n08i40k.npluginapi.block.NBlockNBT;
+import ru.n08i40k.npluginapi.custom.block.NBlock;
+import ru.n08i40k.npluginapi.custom.block.NBlockNBT;
 
 public class EventsListener extends PluginUse implements Listener {
     public EventsListener() {}

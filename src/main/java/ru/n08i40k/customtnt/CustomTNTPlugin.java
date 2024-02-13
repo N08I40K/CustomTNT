@@ -13,7 +13,7 @@ import ru.n08i40k.customtnt.config.MainConfig;
 import ru.n08i40k.customtnt.config.ReplaceBlocksEntryAccessor;
 import ru.n08i40k.customtnt.events.EventBusManager;
 import ru.n08i40k.npluginapi.NPluginApi;
-import ru.n08i40k.npluginapi.craft.NCraftRecipe;
+import ru.n08i40k.npluginapi.custom.craft.NCraftRecipe;
 import ru.n08i40k.npluginapi.plugin.NPlugin;
 import ru.n08i40k.npluginconfig.Config;
 import ru.n08i40k.npluginlocale.Locale;

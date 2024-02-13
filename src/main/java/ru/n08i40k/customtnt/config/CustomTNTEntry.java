@@ -2,7 +2,7 @@ package ru.n08i40k.customtnt.config;
 
 import lombok.Getter;
 import lombok.Setter;
-import ru.n08i40k.npluginapi.craft.NCraftRecipeEntry;
+import ru.n08i40k.npluginapi.custom.craft.NCraftRecipeEntry;
 
 import java.util.List;
 
